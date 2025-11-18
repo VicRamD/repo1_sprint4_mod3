@@ -1,0 +1,25 @@
+{
+  "name": "repo1sp4mod3",
+  "version": "1.0.0",
+  "description": "Repositorio del TP 1 del sprint 4 del modulo 3",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicRamD/repo1_sprint4_mod3.git"
+  },
+  "author": "Victor francisco Ramirez Diaz\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[F",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VicRamD/repo1_sprint4_mod3/issues"
+  },
+  "homepage": "https://github.com/VicRamD/repo1_sprint4_mod3#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-validator": "^7.3.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.20.0"
+  }
+}
