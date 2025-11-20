@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= titulo %></title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <!-- Navbar -->
     <%- include('partials/navbar') %>
-
+    <!-- Header -->
+    <%- include('partials/header') %>
     <!-- Contenido dinámico -->
-    <main>
+    <main class="flex flex-row flex-wrap justify-center w-full lg:justify-between lg:w-5/6">
         <%- body %>
     </main>
 
