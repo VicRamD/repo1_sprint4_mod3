@@ -42,7 +42,10 @@ app.use(expressLayouts);
 app.set('layout', 'layout') //archivo base de layout
 
 //servir archivos estaticos
-app.use(express.static(path.resolve('./public')));
+//console.log('Path join:')
+//console.log(path.join(__dirname, 'public'));
+//app.use(express.static(path.resolve('./public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //configuración de rutas
 app.use('/api', superHeroRoutes);

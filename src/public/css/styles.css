@@ -1,0 +1,27 @@
+/* estilos generales */
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*/
+
+/*
+* {
+    margin: 0px;
+    box-sizing: border-box;
+} */
+
+h1 {
+    font-family: "Comic Relief", system-ui;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li{
+        max-width: 250px;
+    }
+}
+
