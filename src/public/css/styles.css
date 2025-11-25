@@ -14,6 +14,14 @@ h1 {
     font-family: "Comic Relief", system-ui;
 }
 
+#infoHeroe {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  /* Opcional para limitar el ancho */
+  max-width: 100%;
+}
+
 @media (min-width: 768px) {
     nav ul {
         display: flex;

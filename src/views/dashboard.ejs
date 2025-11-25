@@ -8,15 +8,15 @@
         
         <% superheroes.forEach(superheroe => { %>
             <div class="p-4 m-2 w-5/6 outline-2 outline-black rounded-md lg:w-2/5">
-                <ul>
+                <ul id="infoHeroe">
                     <li><strong>Nombre:</strong> <%= superheroe.Nombre %></li>
                     <li><strong>Nombre real:</strong> <%= superheroe["Nombre Real"] %></li>
                     <li><strong>Edad:</strong> <%= superheroe.Edad %></li>
                     <li><strong>Planeta de Origen:</strong> <%= superheroe["Planeta de Origen"] %></li>
                     <li><strong>Debilidad:</strong> <%= superheroe.Debilidad %></li>
-                    <li><strong>Poderes:</strong> <%= superheroe.Poderes %></li>
-                    <li><strong>Aliados:</strong> <%= superheroe.Aliados %></li>
-                    <li><strong>Enemigos:</strong> <%= superheroe.Enemigos %></li>
+                    <li><strong>Poderes:</strong> <%= superheroe.Poderes.join(', ') %></li>
+                    <li><strong>Aliados:</strong> <%= superheroe.Aliados.join(', ') %></li>
+                    <li><strong>Enemigos:</strong> <%= superheroe.Enemigos.join(', ') %></li>
                     <li class="text-center outline-2 outline-green-400 m-2 hover:bg-green-200"><a href="/api/heroes/<%= superheroe.id %>/editar" class="inline-block w-full">Editar</a></li>
                     <form method="post" action="/api/heroes/<%= superheroe.id %>?_method=DELETE" class="w-full p-2">
                         <input type="hidden" name="heroeID">
