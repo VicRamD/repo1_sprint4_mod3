@@ -7,6 +7,11 @@ import {obtenerSuperheroePorId, obtenerTodosLosSuperheroes,
 
 import {renderizarSuperheroe, renderizarListaSuperheroes} from '../views/responseView.mjs';
 
+export const cargarLandingPageController = (req, res) => {
+    console.log("en cargarLandingPageController");
+    res.render('home', {titulo: 'Inicio'});
+}
+
 export const obtenerSuperheroePorIdController = async (req, res) => {
     try {
         console.log("En obtenerSuperheroePorIdController");

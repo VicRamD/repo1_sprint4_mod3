@@ -23,5 +23,18 @@ h1 {
     nav ul li{
         max-width: 250px;
     }
+
+    /*Landing page*/
+    div#containerPortada {
+        flex-direction: row;
+    }
+
+    a#imagen-hero {
+        order: 2;
+    }
+
+    img#descripcion-divertida {
+        order: 1;
+    }
 }
 

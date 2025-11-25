@@ -9,6 +9,7 @@ import expressLayouts from 'express-ejs-layouts';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import {cargarLandingPageController} from './controllers/superheroesController.mjs';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -46,6 +47,9 @@ app.set('layout', 'layout') //archivo base de layout
 //console.log(path.join(__dirname, 'public'));
 //app.use(express.static(path.resolve('./public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+//pagina de incio
+app.get('/', cargarLandingPageController);
 
 //configuración de rutas
 app.use('/api', superHeroRoutes);
