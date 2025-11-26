@@ -1,75 +1,78 @@
 <body>
-    <form action="./editar?_method=PUT" method="post" class="flex flex-col p-2">
-        <label for="nombreSuperHeroe" class="w-full">Nombre/Alias de héroe</label>
-        <input type="text" name="nombreSuperHeroe" id="nombreSuperHeroe" class="w-full bg-sky-500/50" 
-        required minlength="3" maxlength="60" value="<%= superheroe.nombreSuperHeroe %>">
-        <br><br>
+    <div class="w-full flex justify-center">
+        <form action="./editar?_method=PUT" method="post" class="flex flex-col p-2 outline-2 outline-violet-300">
+            <label for="nombreSuperHeroe" class="w-full"><strong>Nombre/Alias de héroe</strong></label>
+            <input type="text" name="nombreSuperHeroe" id="nombreSuperHeroe" class="w-full bg-sky-500/50" 
+            required minlength="3" maxlength="60" value="<%= superheroe.nombreSuperHeroe %>">
+            <br><br>
 
-        <label for="nombreReal" class="w-full">Nombre real</label>
-        <input type="text" name="nombreReal" id="nombreReal" class="w-full bg-sky-500/50" 
-        required minlength="3" maxlength="60" value="<%= superheroe.nombreReal %>">
-        <br><br>
+            <label for="nombreReal" class="w-full"><strong>Nombre real</strong></label>
+            <input type="text" name="nombreReal" id="nombreReal" class="w-full bg-sky-500/50" 
+            required minlength="3" maxlength="60" value="<%= superheroe.nombreReal %>">
+            <br><br>
 
-        <label for="edad" class="w-full">Edad</label>
-        <input type="number" name="edad" id="edad" class="w-full bg-sky-500/50" 
-        required min="0" value="<%= superheroe.edad %>">
-        <br><br>
+            <label for="edad" class="w-full"><strong>Edad</strong></label>
+            <input type="number" name="edad" id="edad" class="w-full bg-sky-500/50" 
+            required min="0" value="<%= superheroe.edad %>">
+            <br><br>
 
-        <label for="planetaOrigen" class="w-full">Planeta de origen</label>
-        <input type="text" name="planetaOrigen" id="planetaOrigen" class="w-full bg-sky-500/50" value="<%= superheroe.planetaOrigen %>">
-        <br><br>
+            <label for="planetaOrigen" class="w-full"><strong>Planeta de origen</strong></label>
+            <input type="text" name="planetaOrigen" id="planetaOrigen" class="w-full bg-sky-500/50" value="<%= superheroe.planetaOrigen %>">
+            <br><br>
 
-        <label for="debilidad" class="w-full">Debilidad</label>
-        <input type="text" name="debilidad" id="debilidad" class="w-full bg-sky-500/50" value="<%= superheroe.debilidad %>">
-        <br><br>
-        <div id="poderesContainer" class="w-full">
-            <label for="poderes" class="w-full">Poderes</label>
-            <input type="text" name="poder" id="idPoder" placeholder="ingrese un poder" class="w-full bg-sky-500/50">
-            <button type="button" id="btnAgregarPoder" class="w-full bg-blue-500">Agregar poder</button>
-            <% superheroe.poderes.forEach(poder => { %>
-                <div class="w-full flex">
-                    <input type="text" name="poderes[]" class="bg-rose-300 w-4/5" 
-                    required minlength="3" maxlength="60" value="<%= poder %>"> 
-                    <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
-                </div>
-                
-            <% }); %>
-        </div>
-        <br><br>
-        <div id="aliadosContainer">
-            <label for="aliados">Aliados</label>
-            <input type="text" name="aliado" id="idAliado" placeholder="ingrese un aliado" class="w-full bg-sky-500/50">
-            <button type="button" id="btnAgregarAliado" class="w-full bg-blue-500">Agregar Aliado</button>
-            <% superheroe.aliados.forEach(aliado => { %>
-                <div class="w-full flex">
-                    <input type="text" name="aliados[]" class="bg-rose-300 w-4/5" 
-                required minlength="3" maxlength="60" value="<%= aliado %>">    
-                    <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
-                </div>
-                
-            <% }); %>
-        </div>
-        <br><br>
-        <div id="enemigosContainer">
-            <label for="enemigos">Enemigos</label>
-            <input type="text" name="enemigo" id="idEnemigo" placeholder="ingrese un enemigo" class="w-full bg-sky-500/50">
-            <button type="button" id="btnAgregarEnemigo" class="w-full bg-blue-500">Agregar Enemigo</button>
-            <% superheroe.enemigos.forEach(enemigo => { %>
-                <div class="w-full flex">
-                    <input type="text" name="enemigos[]" class="bg-rose-300 w-4/5" 
-                required minlength="3" maxlength="60" value="<%= enemigo %>">
-                    <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
-                </div>
+            <label for="debilidad" class="w-full"><strong>Debilidad</strong></label>
+            <input type="text" name="debilidad" id="debilidad" class="w-full bg-sky-500/50" value="<%= superheroe.debilidad %>">
+            <br><br>
+            <div id="poderesContainer" class="w-full">
+                <label for="poderes" class="w-full"><strong>Poderes</strong></label>
+                <input type="text" name="poder" id="idPoder" placeholder="ingrese un poder" class="w-full bg-sky-500/50">
+                <button type="button" id="btnAgregarPoder" class="w-full bg-blue-500">Agregar poder</button>
+                <% superheroe.poderes.forEach(poder => { %>
+                    <div class="w-full flex">
+                        <input type="text" name="poderes[]" class="bg-rose-300 w-4/5" 
+                        required minlength="3" maxlength="60" value="<%= poder %>"> 
+                        <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
+                    </div>
                     
-            <% }); %>
+                <% }); %>
+            </div>
+            <br><br>
+            <div id="aliadosContainer">
+                <label for="aliados"><strong>Aliados</strong></label>
+                <input type="text" name="aliado" id="idAliado" placeholder="ingrese un aliado" class="w-full bg-sky-500/50">
+                <button type="button" id="btnAgregarAliado" class="w-full bg-blue-500">Agregar Aliado</button>
+                <% superheroe.aliados.forEach(aliado => { %>
+                    <div class="w-full flex">
+                        <input type="text" name="aliados[]" class="bg-rose-300 w-4/5" 
+                    required minlength="3" maxlength="60" value="<%= aliado %>">    
+                        <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
+                    </div>
+                    
+                <% }); %>
+            </div>
+            <br><br>
+            <div id="enemigosContainer">
+                <label for="enemigos"><strong>Enemigos</strong></label>
+                <input type="text" name="enemigo" id="idEnemigo" placeholder="ingrese un enemigo" class="w-full bg-sky-500/50">
+                <button type="button" id="btnAgregarEnemigo" class="w-full bg-blue-500">Agregar Enemigo</button>
+                <% superheroe.enemigos.forEach(enemigo => { %>
+                    <div class="w-full flex">
+                        <input type="text" name="enemigos[]" class="bg-rose-300 w-4/5" 
+                    required minlength="3" maxlength="60" value="<%= enemigo %>">
+                        <button type="button" class="outline-2 outline-red-600 bg-rose-200 w-1/5">Quitar</button>
+                    </div>
+                        
+                <% }); %>
 
-        </div>
-        <br><br>
-        <label for="creador">Creador</label>
-        <input type="text" name="creador" id="creador" class="w-full bg-sky-500/50" value="<%= superheroe.creador %>">
-        <br><br>
-        <input type="submit" value="Enviar datos" class="w-full bg-green-600">
-    </form>
+            </div>
+            <br><br>
+            <label for="creador"><strong>Creador</strong></label>
+            <input type="text" name="creador" id="creador" class="w-full bg-sky-500/50" value="<%= superheroe.creador %>">
+            <br><br>
+            <input type="submit" value="Enviar datos" class="w-full bg-green-600">
+        </form>
+    </div>
+    
     <script src="/js/formFunctions.mjs"></script>
     <script>
         //dar funcionalidad a los botones quitar que aparecen de base

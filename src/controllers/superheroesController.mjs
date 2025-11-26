@@ -9,7 +9,7 @@ import {renderizarSuperheroe, renderizarListaSuperheroes} from '../views/respons
 
 export const cargarLandingPageController = (req, res) => {
     console.log("en cargarLandingPageController");
-    res.render('home', {titulo: 'Inicio'});
+    res.render('home', {titulo: ''});
 }
 
 export const obtenerSuperheroePorIdController = async (req, res) => {
